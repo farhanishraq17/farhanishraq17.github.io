@@ -25,15 +25,15 @@
     
     /* Typography */
     --font-serif: Georgia, 'Times New Roman', Times, serif;
-    --font-sans: Arial, Helvetica, sans-serif;
-    --font-body: var(--font-serif);
+    --font-sans: 'Roboto', Arial, Helvetica, sans-serif;
+    --font-body: var(--font-sans);
     --font-size-base: 15px;
     --font-size-small: 13px;
     --font-size-large: 17px;
     --line-height: 1.65;
     
     /* Layout */
-    --sidebar-width: 320px;
+    --sidebar-width: 280px;
     --content-max-width: 800px;
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
@@ -159,6 +159,7 @@ u {
 .sidebar {
     width: var(--sidebar-width);
     min-width: var(--sidebar-width);
+    flex-shrink: 0;
     background-color: var(--color-sidebar-bg);
     border-right: 1px solid var(--color-border);
     padding: var(--spacing-xl);
@@ -166,6 +167,14 @@ u {
     top: 0;
     height: 100vh;
     overflow-y: auto;
+}
+
+/* Wrapper for centering main content */
+.main-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0 var(--spacing-xl);
 }
 
 .profile {
@@ -247,7 +256,7 @@ u {
    RIGHT MAIN CONTENT
    ======================================== */
 .main-content {
-    flex: 1;
+    width: 100%;
     max-width: var(--content-max-width);
     padding: var(--spacing-xl);
     padding-top: var(--spacing-lg);
