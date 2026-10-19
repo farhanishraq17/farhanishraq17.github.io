@@ -58,6 +58,10 @@ img { max-width: 100%; height: auto; }
   gap: 34px; padding: 62px 0 64px; align-items: start;
 }
 .intro h1 { margin-bottom: 17px; font: 400 clamp(39px, 5vw, 52px)/1.09 var(--serif); letter-spacing: -.045em; }
+.profile-photo {
+  display: block; width: 152px; height: 190px; margin-bottom: 24px;
+  object-fit: cover; object-position: 50% 15%; border-radius: 6px; border: 1px solid var(--line);
+}
 .tagline { font-size: 15px; color: var(--muted); }
 .profile-links { display: flex; flex-wrap: wrap; gap: 12px 18px; margin-top: 22px; font-size: 14px; }
 .bio { font-size: 15px; line-height: 1.7; }
